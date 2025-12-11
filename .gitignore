@@ -1,0 +1,6 @@
+# Build outputs
+/dist/
+!/dist/public/
+build/
+*.dist
+node_modules

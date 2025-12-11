@@ -9,6 +9,8 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
+  // [SOLUÇÃO]: Adicione esta linha. Use o nome do seu repositório (com barras laterais)
+  base: '/helenara-2026/', 
   plugins,
   resolve: {
     alias: {
