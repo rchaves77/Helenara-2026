@@ -9,8 +9,9 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime()];
 
 export default defineConfig({
-  // [SOLUÇÃO]: Adicione esta linha. Use o nome do seu repositório (com barras laterais)
-  base: '/helenara-2026/', 
+  // [CORRIGIDO]: Define o caminho base para o GitHub Pages.
+  // Use o nome exato do seu repositório (ex: '/nome-do-repositorio/').
+  base: '/Helenara-2026/', 
   plugins,
   resolve: {
     alias: {
@@ -20,9 +21,11 @@ export default defineConfig({
     },
   },
   envDir: path.resolve(import.meta.dirname),
+  // Mantém a pasta raiz do frontend
   root: path.resolve(import.meta.dirname, "client"),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // Mantém a pasta de saída 'dist/public'
+    outDir: path.resolve(import.meta.dirname, "dist/public"), 
     emptyOutDir: true,
   },
   server: {
